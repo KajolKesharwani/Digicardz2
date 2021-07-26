@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "99592728968",
+    "project_id": "digicardz-a291e",
+    "storage_bucket": "digicardz-a291e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99592728968:android:a916d8aa39b3637eaf0a3d",
+        "android_client_info": {
+          "package_name": "android.com.digicarddz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99592728968-6v437bkd19gk9lr9sehfquhleghn21ng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOSr7wdVVzzeMx1opq2w79V7GTMyuezxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99592728968-6v437bkd19gk9lr9sehfquhleghn21ng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99592728968:android:fd9fef274a0b939caf0a3d",
+        "android_client_info": {
+          "package_name": "android.com.digicardz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99592728968-6v437bkd19gk9lr9sehfquhleghn21ng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOSr7wdVVzzeMx1opq2w79V7GTMyuezxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99592728968-6v437bkd19gk9lr9sehfquhleghn21ng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

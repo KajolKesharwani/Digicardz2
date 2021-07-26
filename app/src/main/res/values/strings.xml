@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Digicardz</string>
+    <string name="array">Contact</string>
+    <string-array name="Subjects">
+        <item>Select Subject</item>
+        <item>Job Queries</item>
+        <item>Our Services</item>
+        <item>For Partnership</item>
+        <item>Review</item>
+        <item>Others</item>
+    </string-array>
+</resources>
