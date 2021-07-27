@@ -9,7 +9,7 @@
 
     <LinearLayout
 
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#5E35B1"
         android:orientation="vertical"
@@ -27,7 +27,7 @@
         android:textSize="30dp" />
 
         <View
-            android:layout_width="980dp"
+            android:layout_width="400dp"
             android:layout_height="2dp"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -36,38 +36,15 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/black" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/mainlogo" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/mainlogo" />
 
-    <TextView
-        android:id="@+id/tvRev"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="Very satisfied"
-        android:textColor="#000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <RatingBar
-            android:id="@+id/rbStars"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FB8C00"
-            android:numStars="5"
-            android:progressBackgroundTint="#000000"
-            android:progressTint="#FB8C00" />
-    </LinearLayout>
 
 
     <EditText
@@ -135,6 +112,34 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
 
+
+        <TextView
+            android:id="@+id/tvRev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Very satisfied"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rbStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FB8C00"
+                android:numStars="5"
+                android:progressBackgroundTint="#000000"
+                android:progressTint="#FB8C00" />
+
+        </LinearLayout>
+
+
         <Button
             android:id="@+id/btnSend"
             android:layout_width="160dp"
@@ -146,9 +151,6 @@
             android:backgroundTint="@android:color/holo_orange_dark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
-
-
 
 
 
