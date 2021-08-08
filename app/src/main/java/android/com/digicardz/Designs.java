@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Designs extends AppCompatActivity {
 
-    ImageView des1;
+    ImageView des1,des2,des3,des4,des5,des6,des7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,6 @@ public class Designs extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         des1 = findViewById(R.id.imageView1);
-
         des1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +33,15 @@ public class Designs extends AppCompatActivity {
                 Intent intent = new Intent(Designs.this,Design1Form.class);
                 startActivity(intent);
 
+            }
+        });
+
+        des2 = findViewById(R.id.imageView2);
+        des2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design2form.class);
+                startActivity(intent);
             }
         });
 

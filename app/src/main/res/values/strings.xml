@@ -28,4 +28,41 @@
         <item>Purple Shade</item>
         <item>Green Shade</item>
     </string-array>
+
+    <string-array name="d2colorpattern">
+        <item>Black Shade</item>
+        <item>Brown Shade</item>
+        <item>Green Shade</item>
+        <item>Yellow Shade</item>
+    </string-array>
+
+    <string-array name="d3colorpattern">
+        <item>Orange Shade1</item>
+        <item>Orange Shade2</item>
+        <item>Purple Shade</item>
+        <item>Yellow Shade</item>
+    </string-array>
+
+    <string-array name="d5colorpattern">
+        <item>Yellow-Green Shade</item>
+        <item>White-Green Shade</item>
+        <item>Purple Shade</item>
+        <item>Green Shade</item>
+    </string-array>
+
+    <string-array name="d4colorpattern">
+        <item>Orange-White Shade</item>
+        <item>Purple Shade</item>
+        <item>Yellow Shade</item>
+    </string-array>
+
+    <string-array name="d6colorpattern">
+        <item>Red-White Shade 1</item>
+        <item>Red-White Shade 2</item>
+    </string-array>
+
+    <string-array name="d7colorpattern">
+        <item>Black-White Shade</item>
+        <item>Coloured Shade</item>
+    </string-array>
 </resources>

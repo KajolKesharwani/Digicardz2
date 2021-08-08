@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Digicardz">
         <activity
+            android:name=".Design2form"
+            android:exported="true" />
+        <activity
             android:name=".Design1Form"
             android:exported="true" />
         <activity android:name=".Contact" />
