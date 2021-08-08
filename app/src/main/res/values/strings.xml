@@ -15,4 +15,17 @@
         <item>Review</item>
         <item>Others</item>
     </string-array>
+
+    <string-array name="packagetype">
+        <item>Basic</item>
+        <item>Pro</item>
+        <item>Premium</item>
+        <item>Ultimate</item>
+    </string-array>
+
+    <string-array name="d1colorpattern">
+        <item>Black Shade</item>
+        <item>Purple Shade</item>
+        <item>Green Shade</item>
+    </string-array>
 </resources>

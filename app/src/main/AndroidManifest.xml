@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Digicardz">
-        <activity android:name=".Contact"></activity>
+        <activity
+            android:name=".Design1Form"
+            android:exported="true" />
+        <activity android:name=".Contact" />
         <activity android:name=".Splashscreen" />
         <activity android:name=".Reviews" />
         <activity android:name=".Pricing" />

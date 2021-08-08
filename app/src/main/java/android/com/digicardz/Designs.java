@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Designs extends AppCompatActivity {
 
+    ImageView des1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,18 @@ public class Designs extends AppCompatActivity {
         Toolbar toolbar=findViewById(R.id.toolbar);
         toolbar.getOverflowIcon().setTint(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
+
+        des1 = findViewById(R.id.imageView1);
+
+        des1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Designs.this,Design1Form.class);
+                startActivity(intent);
+
+            }
+        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomnavview);
         bottomNavigationView.setSelectedItemId(R.id.nav_designs);
