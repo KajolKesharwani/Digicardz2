@@ -9,11 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Digicardz">
-        <activity android:name=".Contact"></activity>
+        <activity
+            android:name=".Design7form"
+            android:exported="true" />
+        <activity
+            android:name=".Design6form"
+            android:exported="true" />
+        <activity
+            android:name=".Design5form"
+            android:exported="true" />
+        <activity
+            android:name=".Design4form"
+            android:exported="true" />
+        <activity
+            android:name=".Design3form"
+            android:exported="true" />
+        <activity
+            android:name=".Design2form"
+            android:exported="true" />
+        <activity
+            android:name=".Design1Form"
+            android:exported="true" />
+        <activity android:name=".Contact" />
         <activity android:name=".Splashscreen" />
         <activity android:name=".Reviews" />
         <activity android:name=".Pricing" />
-        <activity android:name=".Home" />
         <activity android:name=".Designs" />
         <activity android:name=".About" />
         <activity android:name=".MainActivity">
