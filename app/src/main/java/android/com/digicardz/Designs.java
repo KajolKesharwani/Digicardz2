@@ -45,6 +45,51 @@ public class Designs extends AppCompatActivity {
             }
         });
 
+        des3 = findViewById(R.id.imageView3);
+        des3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design3form.class);
+                startActivity(intent);
+            }
+        });
+
+        des4 = findViewById(R.id.imageView4);
+        des4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design4form.class);
+                startActivity(intent);
+            }
+        });
+
+        des5 = findViewById(R.id.imageView5);
+        des5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design5form.class);
+                startActivity(intent);
+            }
+        });
+
+        des6 = findViewById(R.id.imageView6);
+        des6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design6form.class);
+                startActivity(intent);
+            }
+        });
+
+        des7 = findViewById(R.id.imageView7);
+        des7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Designs.this,Design7form.class);
+                startActivity(intent);
+            }
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomnavview);
         bottomNavigationView.setSelectedItemId(R.id.nav_designs);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

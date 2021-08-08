@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Digicardz">
         <activity
+            android:name=".Design7form"
+            android:exported="true" />
+        <activity
+            android:name=".Design6form"
+            android:exported="true" />
+        <activity
+            android:name=".Design5form"
+            android:exported="true" />
+        <activity
+            android:name=".Design4form"
+            android:exported="true" />
+        <activity
+            android:name=".Design3form"
+            android:exported="true" />
+        <activity
             android:name=".Design2form"
             android:exported="true" />
         <activity

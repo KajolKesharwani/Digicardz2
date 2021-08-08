@@ -26,12 +26,12 @@ public class Design2form extends AppCompatActivity implements AdapterView.OnItem
     ArrayList<Integer> servicelist = new ArrayList<>();
     String[] servicesarray = {"Call","Gmail","Whatsapp","Facebook","Instagram",
             "LinkedIn","Github","Twitter","Blog","Website"};
-    int[] images = {R.drawable.d1s1,R.drawable.d1s2,R.drawable.d1s3};
+    int[] images = {R.drawable.d2s1,R.drawable.d2s2,R.drawable.d2s3,R.drawable.d2s4};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_design1_form);
+        setContentView(R.layout.activity_design2form);
 
         Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Design2form.this,
@@ -42,7 +42,7 @@ public class Design2form extends AppCompatActivity implements AdapterView.OnItem
 
         Spinner mySpinner2 = (Spinner) findViewById(R.id.spinner2);
         ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(Design2form.this,
-                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.d1colorpattern));
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.d2colorpattern));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner2.setAdapter(myAdapter2);
         mySpinner2.setOnItemSelectedListener(this);
