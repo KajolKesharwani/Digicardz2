@@ -1,419 +1,761 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/person"
+            app:menu="@menu/main_menu"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:title="DigiCardz" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="174dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="1620dp"
-            android:text="Price Plan"
-            android:textColor="@color/black"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="150dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="410dp"
-            android:layout_height="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="780dp"
-            android:src="@drawable/dotted"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@id/appbar">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="410dp"
-            android:layout_height="5dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="748dp"
-            android:src="@drawable/dotted"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.32"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-            android:layout_width="309dp"
-            android:layout_height="320dp"
-            android:layout_marginBottom="320dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.016">
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/darker_gray"
-                android:gravity="center_horizontal"
-                android:text="Basic"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="-: Price Plan :-"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="28dp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
+            <View
+                android:id="@+id/view1"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="52dp"
-                android:gravity="center_horizontal"
-                android:text="₹ 500 / Digi-Card"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="94dp"
-                android:gravity="center_horizontal"
-                android:text="Pre Defined Design"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="134dp"
-                android:gravity="center_horizontal"
-                android:text="*Logo/Photo, Name, Tagline"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="178dp"
-                android:gravity="center_horizontal"
-                android:text="4 Social Integrations"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="222dp"
-                android:gravity="center_horizontal"
-                android:text="Free Content Updatable 3 Times Only"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="270dp"
-                android:gravity="center_horizontal"
-                android:text="QR / Download Brochure Integration"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="309dp"
-            android:layout_height="326dp"
-            android:layout_marginBottom="180dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2"
-            app:layout_constraintVertical_bias="0.033">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#964B00"
-                android:gravity="center_horizontal"
-                android:text="Pro"
-                android:textColor="@color/black"
-                android:textSize="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:background="@color/orange"/>
 
             <TextView
+                android:id="@+id/offertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offer"
+                android:textColor="#008000"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view2"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="52dp"
-                android:gravity="center_horizontal"
-                android:text="₹ 750 / Digi-Card"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="94dp"
-                android:gravity="center_horizontal"
-                android:text="Pre Defined Design"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="136dp"
-                android:gravity="center_horizontal"
-                android:text="*Logo/Photo, Name, Tagline"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="180dp"
-                android:gravity="center_horizontal"
-                android:text="6 Social Integrations"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="224dp"
-                android:gravity="center_horizontal"
-                android:text="Free Content Updatable 5 Times Only"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="275dp"
-                android:gravity="center_horizontal"
-                android:text="QR / Download Brochure Integration"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="309dp"
-            android:layout_height="326dp"
-            android:layout_marginBottom="52dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
-            app:layout_constraintVertical_bias="0.059">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/holo_orange_light"
-                android:gravity="center_horizontal"
-                android:text="Primium"
-                android:textColor="@color/black"
-                android:textSize="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/offertxt"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:background="@color/orange"/>
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardviewlayout"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="52dp"
-                android:gravity="center_horizontal"
-                android:text="₹ 1000 / Digi-Card"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="94dp"
-                android:gravity="center_horizontal"
-                android:text="Pre Defined Design"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="136dp"
-                android:gravity="center_horizontal"
-                android:text="*Logo/Photo, Name, Tagline"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="180dp"
-                android:gravity="center_horizontal"
-                android:text="8 Social Integrations"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="224dp"
-                android:gravity="center_horizontal"
-                android:text="Free Content Updatable 8 Times Only"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="275dp"
-                android:gravity="center_horizontal"
-                android:text="QR / Download Brochure Integration (Max size 25MB)"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
-            android:layout_width="310dp"
-            android:layout_height="376dp"
-            android:layout_marginBottom="42dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.474"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView3"
-            app:layout_constraintVertical_bias="0.282">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/holo_orange_dark"
-                android:gravity="center_horizontal"
-                android:text="Ultimate"
-                android:textColor="@color/black"
-                android:textSize="30dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="NotSibling">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp">
+                        <TextView
+                            android:id="@+id/basictxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Basic"
+                            android:textColor="@color/orange"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/arrowbtn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/downarrow"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintStart_toEndOf="@id/basictxt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/expandableView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/basictxt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <TextView
+                                android:id="@+id/digicardtxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 500 / Digi-Card"
+                                android:textSize="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints"
+                                android:gravity="center_horizontal" />
+
+                            <TextView
+                                android:id="@+id/predefinedesigngtxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pre_defined_design"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/digicardtxt2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:drawableLeft="@drawable/tickmark" />
+
+                            <TextView
+                                android:id="@+id/logotxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Logo/Photo, Name, Tagline"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/predefinedesigngtxt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/socialinttxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4 Social Integrations"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintTop_toBottomOf="@id/logotxt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/updatetxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Free Content Updatable 3 Times Only"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/socialinttxt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/brochuretxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QR / Download Brochure Integration"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#C50505"
+                                android:paddingHorizontal="5dp"
+                                app:layout_constraintTop_toBottomOf="@id/updatetxt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:drawableStart="@drawable/cross"
+                                android:drawableLeft="@drawable/cross" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView><!--Module1-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardView">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp">
+
+                        <TextView
+                            android:id="@+id/protxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Pro"
+                            android:textColor="@color/orange"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/arrowbtn2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/downarrow"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="25dp"
+                            app:layout_constraintStart_toEndOf="@id/protxt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/expandableView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/protxt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:id="@+id/digicardtxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 750 / Digi-Card"
+                                android:textSize="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/predefinedesigngtxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pre_defined_design"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/digicardtxt3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:drawableLeft="@drawable/tickmark" />
+
+                            <TextView
+                                android:id="@+id/logotxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Logo/Photo, Name, Tagline"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/predefinedesigngtxt2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/socialinttxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6 Social Integrations"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintTop_toBottomOf="@id/logotxt2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/updatetxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Free Content Updatable 5 Times Only"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/socialinttxt2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/brochuretxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QR / Download Brochure Integration"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:textColor="#C50505"
+                                android:drawableLeft="@drawable/cross"
+                                android:paddingHorizontal="5dp"
+                                app:layout_constraintTop_toBottomOf="@id/updatetxt2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView><!--Module2-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardView2">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp">
+                        <TextView
+                            android:id="@+id/premiumtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Premium"
+                            android:textColor="@color/orange"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/arrowbtn3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/downarrow"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintStart_toEndOf="@id/premiumtxt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/expandableView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/premiumtxt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:id="@+id/digicardtxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 1000 / Digi-Card"
+                                android:textSize="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/predefinedesigngtxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pre_defined_design"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/digicardtxt4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:drawableLeft="@drawable/tickmark" />
+
+                            <TextView
+                                android:id="@+id/logotxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Logo/Photo, Name, Tagline"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/predefinedesigngtxt3"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/socialinttxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8 Social Integrations"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintTop_toBottomOf="@id/logotxt3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/updatetxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Free Content Updatable 8 Times Only"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/socialinttxt3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/brochuretxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="QR / Download Brochure Integration"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:paddingHorizontal="5dp"
+                                app:layout_constraintTop_toBottomOf="@id/updatetxt3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView><!--Module3-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardView3">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp">
+                        <TextView
+                            android:id="@+id/ultimatetxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Ultimate"
+                            android:textColor="@color/orange"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/arrowbtn4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/downarrow"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintStart_toEndOf="@id/ultimatetxt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/expandableView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone"
+                            android:textAlignment="center"
+                            app:layout_constraintTop_toBottomOf="@+id/ultimatetxt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/digicardtxt5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 1500 / Digi-Card"
+                                android:textSize="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/predefinedesigngtxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pre_defined_design"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/digicardtxt5"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:drawableLeft="@drawable/tickmark" />
+
+                            <TextView
+                                android:id="@+id/logotxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Logo/Photo, Name, Tagline"
+                                android:textSize="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/predefinedesigngtxt4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/socialinttxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8+ Social Integrations"
+                                android:textSize="20dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                app:layout_constraintTop_toBottomOf="@id/logotxt4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/updatetxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Free Content Updatable for 2 years"
+                                android:textSize="20dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:textColor="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/socialinttxt4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/brochuretxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QR / Download Brochure Integration \n(Max size 100MB) "
+                                android:textSize="20dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:paddingHorizontal="5dp"
+                                app:layout_constraintTop_toBottomOf="@id/updatetxt4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/customtxt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1 Time Complete Custom Design Rework "
+                                android:textSize="20dp"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/tickmark"
+                                android:paddingHorizontal="5dp"
+                                app:layout_constraintTop_toBottomOf="@id/brochuretxt4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView><!--Module3-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="52dp"
-                android:gravity="center_horizontal"
-                android:text="₹ 1500 / Digi-Card"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/logo_should_be_provided_if_user_wants_us_to_make_the_logo_extra_charges_will_be_applied"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
-
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:justificationMode="inter_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardviewlayout"
+                />
             <TextView
+                android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="94dp"
-                android:gravity="center_horizontal"
-                android:text="Custom Design"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/qr_download_functionality_can_be_added_to_basic_and_pro_plans_as_well_at_a_fee_of_250_max_size_25mb"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="136dp"
-                android:gravity="center_horizontal"
-                android:text="*Logo/Photo, Name, Tagline"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="180dp"
-                android:gravity="center_horizontal"
-                android:text="8+ Social Integrations"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="224dp"
-                android:gravity="center_horizontal"
-                android:text="Free Content Updatable for 2 years"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="275dp"
-                android:gravity="center_horizontal"
-                android:text="QR, Download Brochure Integration (Max size 100MB)"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="325dp"
-                android:gravity="center_horizontal"
-                android:text="1 Time Complete Custom Design Rework"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView5"
+                />
 
 
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="390dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="53dp"
-            android:text="* Logo should be provided. If user wants us to make the logo, extra charges will be applied."
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView4"
-            app:layout_constraintVertical_bias="0.0" />
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomnavview"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

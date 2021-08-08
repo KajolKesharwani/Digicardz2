@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +21,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setIcon(R.drawable.mainlogo);
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        toolbar.getOverflowIcon().setTint(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomnavview);
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.nav_home:
+                        return true;
+                    case R.id.nav_designs:
+                        startActivity(new Intent(getApplicationContext(),Designs.class) );
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_pricing:
+                        startActivity(new Intent(getApplicationContext(),Pricing.class) );
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_reviews:
+                        startActivity(new Intent(getApplicationContext(),Reviews.class) );
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
     }
     @Override
@@ -33,25 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         switch (item.getItemId()){
-            case R.id.home:
-                Intent intent1 = new Intent(this, Home.class);
-                this.startActivity(intent1);
-                return true;
+
             case R.id.abt:
                 Intent intent2 = new Intent(this, About.class);
                 this.startActivity(intent2);
-                return true;
-            case R.id.ds:
-                Intent intent3 = new Intent(this, Designs.class);
-                this.startActivity(intent3);
-                return true;
-            case R.id.pr:
-                Intent intent4 =new Intent(this, Pricing.class);
-                this.startActivity(intent4);
-                return true;
-            case R.id.rv:
-                Intent intent5 = new Intent(this, Reviews.class);
-                this.startActivity(intent5);
                 return true;
             case R.id.cn:
                 Intent intent6 = new Intent(this, Contact.class);
@@ -60,12 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
             default:
                 return super.onOptionsItemSelected(item);
-
-
-
-
-
-
 
         }
     }

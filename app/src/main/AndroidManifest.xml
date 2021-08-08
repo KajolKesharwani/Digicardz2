@@ -13,7 +13,6 @@
         <activity android:name=".Splashscreen" />
         <activity android:name=".Reviews" />
         <activity android:name=".Pricing" />
-        <activity android:name=".Home" />
         <activity android:name=".Designs" />
         <activity android:name=".About" />
         <activity android:name=".MainActivity">
