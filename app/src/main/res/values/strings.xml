@@ -7,6 +7,8 @@
     <string name="pre_defined_design">Pre Defined Design</string>
     <string name="logo_should_be_provided_if_user_wants_us_to_make_the_logo_extra_charges_will_be_applied">* Logo should be provided. If user wants us to make the logo, extra charges will be applied.</string>
     <string name="qr_download_functionality_can_be_added_to_basic_and_pro_plans_as_well_at_a_fee_of_250_max_size_25mb">* QR / Download functionality can be added to Basic and Pro Plans as well at a fee of ₹ 250 (Max size - 25MB).</string>
+    <string name="abouttxt"><b>Introducing the eco-friendly and digitalized cards of the future, Digi-Cardz.</b></string>
+    <string name="abouttxt1">Digi-Cardz bring a futuristic approach to the conventional means of information distribution. All of your information and means to contact will be a single click away. Digi-Cardz are fully customizable and can cater to all of your needs. Just by tapping on the various featured icons, people can save your contact, call you, find you on social networks or find your business/personal location.</string>
     <string-array name="Subjects">
         <item>Select Subject</item>
         <item>Job Queries</item>
