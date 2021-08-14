@@ -208,11 +208,10 @@
                                 android:layout_marginBottom="10dp"
                                 android:textColor="@color/black"
                                 android:gravity="center_horizontal"
-                                android:drawableLeft="@drawable/tickmark"
                                 app:layout_constraintTop_toBottomOf="@id/logotxt"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                />
+                                app:drawableLeftCompat="@drawable/tickmark" />
 
                             <TextView
                                 android:id="@+id/updatetxt"
@@ -223,12 +222,11 @@
                                 android:layout_marginTop="15dp"
                                 android:layout_marginBottom="10dp"
                                 android:gravity="center_horizontal"
-                                android:drawableLeft="@drawable/tickmark"
                                 android:textColor="@color/black"
                                 app:layout_constraintTop_toBottomOf="@id/socialinttxt"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                />
+                                app:drawableStartCompat="@drawable/tickmark" />
 
                             <TextView
                                 android:id="@+id/brochuretxt"
@@ -244,8 +242,7 @@
                                 app:layout_constraintTop_toBottomOf="@id/updatetxt"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                android:drawableStart="@drawable/cross"
-                                android:drawableLeft="@drawable/cross" />
+                                app:drawableStartCompat="@drawable/cross" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView><!--Module1-->
