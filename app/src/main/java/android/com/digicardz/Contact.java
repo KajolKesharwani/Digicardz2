@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -136,14 +137,14 @@ public class Contact extends AppCompatActivity implements AdapterView.OnItemSele
             phno.requestFocus();
             phno.setError("FIELD CANNOT BE EMPTY");
             return false;
-        } else if (!mobileNumber.matches("^[+][0-9]{10,13}$")) {
+        } else if (!mobileNumber.matches("^[0-9]{10,13}$")) {
             phno.requestFocus();
-            phno.setError("correct Format: +91xxxxxxxxxx");
+            phno.setError("correct Format: xxxxxxxxxx");
             return false;
         } else if (message.isEmpty()) {
             msgtxt.requestFocus();
             msgtxt.setError("Message Cannot Be Empty");
-            return false;
+           return false;
         } else {
             return true;
         }
