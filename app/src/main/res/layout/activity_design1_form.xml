@@ -23,7 +23,7 @@
             app:navigationIcon="?attr/homeAsUpIndicator"
             app:menu="@menu/main_menu"
             android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-            app:title="Digi-Cardz D7" />
+            app:title="Digi-Cardz D1" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
