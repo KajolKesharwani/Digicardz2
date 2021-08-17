@@ -21,10 +21,10 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/black"
             app:titleTextColor="@color/white"
-            app:navigationIcon="@drawable/person"
+            app:navigationIcon="?attr/homeAsUpIndicator"
             app:menu="@menu/main_menu"
             android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-            app:title="DigiCardz" />
+            app:title="Digi-Cardz D2" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
