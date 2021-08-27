@@ -3,8 +3,11 @@ package android.com.digicardz;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -56,6 +59,11 @@ public class Design1Form extends AppCompatActivity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_design1_form);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.getNavigationIcon().mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+        toolbar.getOverflowIcon().setTint(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
+
         nametxt = findViewById(R.id.nametxt);
         emailidtxt = findViewById(R.id.emailidtxt);
         phnnotxt = findViewById(R.id.phnnotxt);
@@ -75,12 +83,12 @@ public class Design1Form extends AppCompatActivity implements AdapterView.OnItem
                 android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.d1colorpattern));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner2.setAdapter(myAdapter2);
-      //  mySpinner2.setOnItemSelectedListener(this);
+        //  mySpinner2.setOnItemSelectedListener(this);
         mySpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?>arg0, View view, int arg2, long arg3) {
 
-                 selected_val=mySpinner2.getSelectedItem().toString();
+                selected_val=mySpinner2.getSelectedItem().toString();
 
 
             }
@@ -95,121 +103,121 @@ public class Design1Form extends AppCompatActivity implements AdapterView.OnItem
 
 
 
-    sliderView = findViewById(R.id.image_slider);
+        sliderView = findViewById(R.id.image_slider);
 
-    SliderAdapter sliderAdapter = new SliderAdapter(images);
-                sliderView.setSliderAdapter(sliderAdapter);
-                sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
-                sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
-                sliderView.startAutoCycle();
+        SliderAdapter sliderAdapter = new SliderAdapter(images);
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
 
-    servicestxtv = findViewById(R.id.servicestxt);
+        servicestxtv = findViewById(R.id.servicestxt);
 
-    selectedday =new boolean[servicesarray.length];
+        selectedday =new boolean[servicesarray.length];
 
-                servicestxtv.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        AlertDialog.Builder builder = new AlertDialog.Builder(Design1Form.this);
-                                                        builder.setTitle("Services on Card");
-                                                        builder.setCancelable(false);
-                                                        builder.setMultiChoiceItems(servicesarray, selectedday, new DialogInterface.OnMultiChoiceClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int i, boolean b) {
+        servicestxtv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Design1Form.this);
+                builder.setTitle("Services on Card");
+                builder.setCancelable(false);
+                builder.setMultiChoiceItems(servicesarray, selectedday, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i, boolean b) {
 
-                                                                if (b) {
-                                                                    servicelist.add(i);
-                                                                    Collections.sort(servicelist);
-                                                                } else {
-                                                                    servicelist.remove(i);
-                                                                }
-                                                            }
-                                                        });
-                                                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int i) {
-                                                                StringBuilder stringBuilder = new StringBuilder();
+                        if (b) {
+                            servicelist.add(i);
+                            Collections.sort(servicelist);
+                        } else {
+                            servicelist.remove(i);
+                        }
+                    }
+                });
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        StringBuilder stringBuilder = new StringBuilder();
 
-                                                                for (int j = 0; j < servicelist.size(); j++) {
-                                                                    stringBuilder.append(servicesarray[servicelist.get(j)]);
+                        for (int j = 0; j < servicelist.size(); j++) {
+                            stringBuilder.append(servicesarray[servicelist.get(j)]);
 
-                                                                    if (j != servicelist.size() - 1) {
-                                                                        stringBuilder.append(", ");
-                                                                    }
-                                                                }
-                                                                servicestxtv.setText(stringBuilder.toString());
-                                                            }
-                                                        });
+                            if (j != servicelist.size() - 1) {
+                                stringBuilder.append(", ");
+                            }
+                        }
+                        servicestxtv.setText(stringBuilder.toString());
+                    }
+                });
 
-                                                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int i) {
-                                                                dialog.dismiss();
-                                                            }
-                                                        });
-                                                        builder.setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int i) {
-                                                                for (int j = 0; j < selectedday.length; j++) {
-                                                                    selectedday[j] = false;
-                                                                    servicelist.clear();
-                                                                    servicestxtv.setText("");
-                                                                }
-                                                            }
-                                                        });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        for (int j = 0; j < selectedday.length; j++) {
+                            selectedday[j] = false;
+                            servicelist.clear();
+                            servicestxtv.setText("");
+                        }
+                    }
+                });
 
-                                                        builder.show();
-                                                    }
-                                                });
+                builder.show();
+            }
+        });
 
-                                                        btn = (Button) findViewById(R.id.btn);
+        btn = (Button) findViewById(R.id.btn);
 
-                                                        btn.setOnClickListener(new View.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(View view) {
-                                                                String Name = nametxt.getText().toString();
-                                                                String EmailId = emailidtxt.getText().toString();
-                                                                String PhoneNumber = phnnotxt.getText().toString();
-                                                                String Package = spinner_text;
-                                                                String Color_Pattern = selected_val;
-                                                                String Service = servicestxtv.getText().toString();
-                                                                String Message = messagetxt.getText().toString();
-                                                                String Send = btn.getText().toString();
-                                                                String subject = spinner_text;
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Name = nametxt.getText().toString();
+                String EmailId = emailidtxt.getText().toString();
+                String PhoneNumber = phnnotxt.getText().toString();
+                String Package = spinner_text;
+                String Color_Pattern = selected_val;
+                String Service = servicestxtv.getText().toString();
+                String Message = messagetxt.getText().toString();
+                String Send = btn.getText().toString();
+                String subject = spinner_text;
 
-                                                                // Toast.makeText(Contact.this, spinner_text, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(Contact.this, spinner_text, Toast.LENGTH_SHORT).show();
 
-                                                                boolean check = validateinfo(Name, EmailId, PhoneNumber, Package, Color_Pattern, Service, Message, Send);
+                boolean check = validateinfo(Name, EmailId, PhoneNumber, Package, Color_Pattern, Service, Message, Send);
 
-                                                                if (check == true) {
+                if (check == true) {
 
-                                                                    Map<String, Object> v = new HashMap<>();
-                                                                    v.put("name", Name);
-                                                                    v.put("email", EmailId);
-                                                                    v.put("Phone_no", PhoneNumber);
-                                                                    v.put("Package", Package);
-                                                                    v.put("Color_Pattern", Color_Pattern);
-                                                                    v.put("Service", Service);
-                                                                    v.put("Subject", subject);
-                                                                    v.put("Message", Message);
+                    Map<String, Object> v = new HashMap<>();
+                    v.put("name", Name);
+                    v.put("email", EmailId);
+                    v.put("Phone_no", PhoneNumber);
+                    v.put("Package", Package);
+                    v.put("Color_Pattern", Color_Pattern);
+                    v.put("Service", Service);
+                    v.put("Subject", subject);
+                    v.put("Message", Message);
 
-                                                                    FirebaseFirestore.getInstance().collection("Form1").add(v).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                                                                        @Override
-                                                                        public void onComplete(@NonNull Task<DocumentReference> task) {
-                                                                            Toast.makeText(getApplicationContext(), "INSERTED", Toast.LENGTH_SHORT).show();
+                    FirebaseFirestore.getInstance().collection("Form1").add(v).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentReference> task) {
+                            Toast.makeText(getApplicationContext(), "INSERTED", Toast.LENGTH_SHORT).show();
 
-                                                                        }
-                                                                    });
+                        }
+                    });
 
 
-                                                                }
-                                                            }
-                                                        });
+                }
+            }
+        });
 
     }
 
 
-private boolean validateinfo(String name, String emailId, String phoneNumber, String Package, String color_pattern, String service, String message, String send) {
+    private boolean validateinfo(String name, String emailId, String phoneNumber, String Package, String color_pattern, String service, String message, String send) {
         if (name.length() == 0) {
             nametxt.requestFocus();
             nametxt.setError("FIELD CANNOT BE EMPTY");

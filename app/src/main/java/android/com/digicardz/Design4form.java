@@ -3,8 +3,11 @@ package android.com.digicardz;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -53,6 +56,10 @@ public class Design4form extends AppCompatActivity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_design4form);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.getNavigationIcon().mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+        toolbar.getOverflowIcon().setTint(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
 
         nametxt = findViewById(R.id.nametxt);
         emailidtxt = findViewById(R.id.emailidtxt);
